@@ -9,11 +9,11 @@ const handler = createHandler({ path: '/webhook', secret: 'webhook' });
 const Port=process.env.PORT || 1212;
 let app=express();
 app.use(handler);
-app.use('/webhook',handler);
+/*app.use('/webhook',handler);*/
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.post('/wenhook',(req,res)=>{
+app.post('/webhook',(req,res)=>{
    console.log(req.body);
    res.sendStatus(200)
 });
