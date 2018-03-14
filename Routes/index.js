@@ -8,6 +8,11 @@ router.get('/test',(req,res)=>{
    res.send('test1');
 });
 
+
+router.post('webhook',(req,res)=>{
+    console.log(req.body);
+    res.send(200);
+});
 router.get('/',(req,res)=>{
     res.send('this is a test webhook server!');
 });
