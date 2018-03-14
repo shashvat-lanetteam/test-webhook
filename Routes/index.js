@@ -18,11 +18,12 @@ handler.on('push', function (event) {
         event.payload.ref)
 });
 handler.on('issues', function (event) {
-    console.log('Received an issue event for %s action=%s: #%d %s',
+    /*console.log('Received an issue event for %s action=%s: #%d %s',
         event.payload.repository.name,
         event.payload.action,
         event.payload.issue.number,
-        event.payload.issue.title)
+        event.payload.issue.title)*/
+    console.log('issues');
 });
 
 /*router.get('/webhook',(req,res)=>{
