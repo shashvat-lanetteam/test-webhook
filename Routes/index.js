@@ -10,8 +10,8 @@ router.get('/test',(req,res)=>{
 
 
 router.post('/webhook',(req,res)=>{
-    console.log(req.body);
-    res.send(200);
+    //console.log(req.body);
+    res.sendStatus(200);
 });
 router.get('/',(req,res)=>{
     res.send('this is a test webhook server!');
