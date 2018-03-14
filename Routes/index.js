@@ -10,7 +10,7 @@ router.get('/test',(req,res)=>{
 
 
 router.post('/webhook',(req,res)=>{
-    console.log(req.body);
+    console.log('===>consolelog router.post'req.body.action);
     res.sendStatus(200);
 });
 router.get('/',(req,res)=>{
@@ -37,7 +37,7 @@ handler.on('issue', (event)=> {
         event.payload.action,
         event.payload.issue.number,
         event.payload.issue.title)*/
-    console.log('issues');
+    console.log('issue');
 });
 
 handler.on('opened',(event)=>{
