@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 let GithubWebHook = require('express-github-webhook');
-let webhookHandler = GithubWebHook({ path: '/webhook', secret: 'secret' });
+let webhookHandler = GithubWebHook({ path: '/webhook', secret: '/webhook' });
 
 router.get('/test',(req,res)=>{
     console.log('test');
@@ -15,7 +15,7 @@ webhookHandler.on('*', function (event, repo, data) {
 
 
 router.post('/webhook',(req,res)=>{
-    console.log('===> consolelog===> router.post===> ',req.body.action);
+    console.log('===> router.post /webhook===> ',req.body.action);
     res.sendStatus(200);
 });
 router.get('/',(req,res)=>{
