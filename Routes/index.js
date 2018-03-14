@@ -5,6 +5,8 @@ router.get('/test',(req,res)=>{
    res.send('test1');
 });
 
-router.get('/this is a test webhook server!');
+router.get('/',(req,res)=>{
+    res.send('this is a test webhook server!');
+});
 
 module.exports={router};
