@@ -9,7 +9,7 @@ router.get('/test',(req,res)=>{
 });
 
 
-router.post('webhook',(req,res)=>{
+router.post('/webhook',(req,res)=>{
     console.log(req.body);
     res.send(200);
 });
