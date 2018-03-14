@@ -4,6 +4,7 @@ const createHandler = require('github-webhook-handler');
 const handler = createHandler({ path: '/webhook', secret: 'webhooksecret' });
 
 router.get('/test',(req,res)=>{
+    console.log('test');
    res.send('test1');
 });
 
