@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 const createHandler = require('github-webhook-handler');
-const handler = createHandler({ path: '/webhook', secret: 'webhooksecret' });
+const handler = createHandler({ path: '/webhook', secret: 'webhook' });
 
 router.get('/test',(req,res)=>{
     console.log('test');
