@@ -13,6 +13,10 @@ app.use('/webhook',handler);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
+app.post('/wenhook',(req,res)=>{
+   console.log(req.body);
+   res.sendStatus(200)
+});
 
 handler.on('error', function (err) {
     console.error('Error:', err.message);
