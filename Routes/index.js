@@ -1,7 +1,7 @@
 const express=require('express');
 const router=express.Router();
 let GithubWebHook = require('express-github-webhook');
-let webhookHandler = GithubWebHook({ path: '/webhook', secret: '/webhook' });
+let webhookHandler = GithubWebHook({ path: '/webhook', secret: 'webhook' });
 
 router.get('/test',(req,res)=>{
     console.log('test');
