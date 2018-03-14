@@ -28,8 +28,8 @@ handler.on('push', function (event) {
         event.payload.ref);
 });
 
-handler.on('opened', function (event) {
-    console.log('opened webhook!!!!!');
+handler.on('issue_comments', function (event) {
+    console.log('issue comment webhook!!!!!');
 });
 
 handler.on('issues', function (event) {
